@@ -18,14 +18,14 @@ enum VoicePreset {
 /**
  * Define blocks
  */
-//% weight=100 color=#7f00ff icon="\uf028"
+//% color=#7f00ff icon="\uf028" block="Speech"
 namespace billy {
     /**
      * Say the following text
      * @param text words to say
      */
     //% block
-    //% weight=10
+    //% weight=80
     export function say(text: string): void {
         sayShim(text)
     }
@@ -35,7 +35,7 @@ namespace billy {
      * @param phonemes phonemes to pronounce
      */
     //% block
-    //% weight=7
+    //% weight=70
     export function pronounce(phonemes: string): void {
         pronounceShim(phonemes)
     }
@@ -45,7 +45,7 @@ namespace billy {
      * @param voicePreset Type of voice to use
      */
     //% block Change voice preset
-    //% weight=9
+    //% weight=100
     export function voicePreset(voicePreset: VoicePreset): void {
         switch (voicePreset) {
             case VoicePreset.ELF:
@@ -86,7 +86,7 @@ namespace billy {
     //% pitch.min=1 pitch.max=255 pitch.defl=64
     //% throat.min=1 throat.max=255 throat.defl=128
     //% mouth.min=1 mouth.max=255 mouth.defl=128
-    //% weight=8
+    //% weight=60
     export function configureVoice(speed: number, pitch: number, throat: number, mouth: number): void {
         /*
          * Original SAM uses 0 as fast 255 as slow.
