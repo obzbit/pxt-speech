@@ -25,7 +25,7 @@ namespace billy {
      * @param text words to say
      */
     //% block
-    //% weight=80
+    //% weight=80 text.defl="Hello."
     export function say(text: string): void {
         sayShim(text)
     }
@@ -35,7 +35,7 @@ namespace billy {
      * @param phonemes phonemes to pronounce
      */
     //% block
-    //% weight=70
+    //% weight=70 phonemes.defl="/HAA4 LOH6UH3"
     export function pronounce(phonemes: string): void {
         pronounceShim(phonemes)
     }
@@ -81,7 +81,7 @@ namespace billy {
      * @param throat how relaxed or tense is the tone of voice
      * @param mouth how tight-lipped or overtly enunciating the voice sounds
      */
-    //% block Configure Voice
+    //% block Configure Voice | speed $speed | pitch $pitch | throat $throat | mouth $mouth
     //% speed.min=1 speed.max=255 speed.defl=72
     //% pitch.min=1 pitch.max=255 pitch.defl=64
     //% throat.min=1 throat.max=255 throat.defl=128
@@ -96,7 +96,6 @@ namespace billy {
     }
 
     /**
-     *
      */
     //% shim=billy::configureVoiceShim
     function configureVoiceShim(speed: number, pitch: number, throat: number, mouth: number): void {
