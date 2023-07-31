@@ -1,4 +1,4 @@
-# Billy
+# pxt-speech (formerly Billy)
 
 This is a MakeCode extension based on a [port of SAM](https://github.com/s-macke/SAM) by Sebastian Macke. 
 
@@ -11,7 +11,7 @@ This repository can be added as an **extension** in MakeCode.
 - Open https://makecode.microbit.org
 - Click on **New Project**
 - Click on **Extensions** under the gearwheel menu
-- Search for **https://github.com/adamish/pxt-billy** and import it
+- Search for **https://github.com/obzbit/pxt-speech** and import it
 
 ## Examples
 
