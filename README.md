@@ -1,6 +1,8 @@
-# pxt-speech (formerly Billy)
+# pxt-speech (Billy)
 
 This is a MakeCode extension based on a [port of SAM](https://github.com/s-macke/SAM) by Sebastian Macke. 
+
+Original version of Billy is by Adam Granger: https://github.com/adamish/pxt-billy
 
 SAM "Software Automatic Mouth" itself is a legendary text to speech algorithm from 1982 for the Commodore C64
 
@@ -17,21 +19,14 @@ This repository can be added as an **extension** in MakeCode.
 
 Basic usage
 
+![](microbit-screenshot.png)  
+
 ```block
 input.onButtonPressed(Button.A, function () {
     billy.say("Hello World")
 })
-
 input.onButtonPressed(Button.B, function () {
-    billy.say("I am a DALEK - EXTERMINATE")
-})
-```
-
-The voice can be configured from an existing preset
-
-```
-input.onButtonPressed(Button.A, function () {
-    billy.configureVoice(VoicePreset.DALEK)
+    billy.voicePreset(VoicePreset.DALEK)
     billy.say("I am a DALEK - EXTERMINATE")
 })
 ```
